@@ -9,11 +9,13 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,6 +33,36 @@ public class ForecastFragment extends Fragment {
 
     ArrayAdapter<String> mForecastAdapter;
     public ForecastFragment() {
+    }
+
+    //onCreate happens before onCreateView
+    @Override
+    public void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+
+        //report that this fragment has menu options
+        //indicates we want callbacks for onCreateOptionsMenu and onOptionsItemSelected
+        setHasOptionsMenu(true);
+    }
+
+    //onCreateOptionsMenu is different for activities and its fragments. It does both.
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.forecastfragment, menu);
+    }
+
+    //called when item chosen
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        int itemId = item.getItemId();
+        //handle if refresh
+        if(itemId == R.id.action_refresh){
+            //crashes because we are missing internet permission. We execute AsyncTask with .execute
+            FetchWeatherTask weathertask = new FetchWeatherTask();
+            weathertask.execute();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

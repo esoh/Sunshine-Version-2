@@ -40,7 +40,7 @@ public class ForecastFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
 
-        //report that this fragment has menu options
+        //report that this fragment has menu options to contribute
         //indicates we want callbacks for onCreateOptionsMenu and onOptionsItemSelected
         setHasOptionsMenu(true);
     }

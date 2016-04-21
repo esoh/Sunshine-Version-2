@@ -69,6 +69,7 @@ public class ForecastFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        //if true, then rootView would be a child of container
         String[] fakeData = {"today", "tmrw", "w", "th", "f", "s", "s"};
         List<String> weekForecast = new ArrayList<String>(Arrays.asList(fakeData));
         mForecastAdapter = new ArrayAdapter<String>(

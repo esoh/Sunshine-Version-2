@@ -4,7 +4,6 @@ package com.example.android.sunshine.app;
  * Created by seanoh on 4/12/16.
  */
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;

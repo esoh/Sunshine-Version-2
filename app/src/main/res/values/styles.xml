@@ -1,8 +1,13 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="titleTextColor">@android:color/white</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!-- controls color of the arrow and the settings -->
+        <item name="colorControlNormal">@android:color/white</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -15,7 +20,11 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="ToolbarDetailTheme" parent="AppTheme">
+        <!-- color of the title of the toolbar -->
         <item name="titleTextColor">@android:color/white</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!-- controls color of the arrow and the settings -->
         <item name="colorControlNormal">@android:color/white</item>
     </style>
 

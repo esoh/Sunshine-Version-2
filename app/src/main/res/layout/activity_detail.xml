@@ -1,15 +1,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.sunshine.app.DetailActivity">
 
     <include layout="@layout/toolbar_actionbar_with_headerbar" />
 
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/detail_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context="com.example.android.sunshine.app.DetailActivity"/>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
